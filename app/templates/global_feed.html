@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+    <!--<h1>Привет, {{ current_user.username }}!</h1>-->
+    <h1>Добро пожаловать в блог для владельцев домашних животных!</h1>
+    {% for post in posts %}
+      {% include '_post.html' %}
+    {% endfor %}
+    {% if prev_url %}
+<a href="{{ prev_url }}">Новое</a>
+{% endif %}
+{% if next_url %}
+<a href="{{ next_url }}">Раннее</a>
+{% endif %}
+{% endblock %}
