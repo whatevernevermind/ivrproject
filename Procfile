@@ -1,1 +1,1 @@
-web: flask db upgrade; gunicorn ivrproject:app
+web: gunicorn app:app
